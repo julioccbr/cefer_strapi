@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agendamentos",
+  "info": {
+    "singularName": "agendamento",
+    "pluralName": "agendamentos",
+    "displayName": "Agendamento",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "espaco": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::espaco.espaco"
+    },
+    "data": {
+      "type": "date",
+      "required": true
+    },
+    "horario": {
+      "type": "time",
+      "required": true
+    },
+    "usuario": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

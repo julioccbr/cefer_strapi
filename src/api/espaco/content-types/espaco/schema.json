@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "espacos",
+  "info": {
+    "singularName": "espaco",
+    "pluralName": "espacos",
+    "displayName": "Espaco",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "descricao": {
+      "type": "text",
+      "required": true
+    },
+    "imagem": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
